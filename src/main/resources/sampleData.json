@@ -1,0 +1,168 @@
+{
+  "orderItems":
+  [
+    {
+      "orderId": "ORD1000001",
+      "orderDate": "2024-04-01T09:00:00Z",
+      "customer": {
+        "customerId": "CUST0001",
+        "name": "Alice Johnson",
+        "address": {
+          "street": "789 Oak Lane",
+          "city": "Techville",
+          "state": "Techstate",
+          "zipCode": "67890",
+          "country": "USA"
+        },
+        "contact": {
+          "phone": "555-6789363",
+          "email": "alice.johnson@example.com"
+        }
+      },
+      "orderType": "New Installation",
+      "status": "Requested",
+      "servicePlan": {
+        "planId": "PLAN2002",
+        "planName": "Family Data Plan",
+        "monthlyCost": 79.99,
+        "data": "10GB",
+        "minutes": "1000",
+        "textMessages": "Unlimited"
+      },
+      "equipment": [
+        {
+          "equipmentId": "EQUIP101",
+          "type": "Modem",
+          "model": "ModemX200",
+          "serialNumber": "SN2000000001"
+        }
+      ],
+      "installationAppointment": {
+        "appointmentId": "APP2000001",
+        "date": "2024-04-18T14:00:00Z",
+        "technician": {
+          "technicianId": "TECH200",
+          "name": "Mike Brown"
+        },
+        "specialInstructions": ""
+      },
+      "billing": {
+        "billingAccountId": "BILL2001",
+        "paymentMethod": "Credit Card",
+        "paymentStatus": "Paid"
+      },
+      "notes": "Ensure modem is compatible with existing home network."
+    },
+    {
+      "orderId": "ORD1000002",
+      "orderDate": "2024-06-02T10:30:00Z",
+      "customer": {
+        "customerId": "CUST0002",
+        "name": "Bob Smith",
+        "address": {
+          "street": "456 Pine Street",
+          "city": "Datacity",
+          "state": "Datastate",
+          "zipCode": "45678",
+          "country": "USA"
+        },
+        "contact": {
+          "phone": "555-456754584",
+          "email": "bob.smith@example.com"
+        }
+      },
+      "orderType": "Service Upgrade",
+      "status": "In Progress",
+      "servicePlan": {
+        "planId": "PLAN3003",
+        "planName": "Business Data Plan",
+        "monthlyCost": 199.99,
+        "data": "50GB",
+        "minutes": "Unlimited",
+        "textMessages": "Unlimited"
+      },
+      "equipment": [
+        {
+          "equipmentId": "EQUIP102",
+          "type": "Router",
+          "model": "RouterPro5000",
+          "serialNumber": "SN3000000002"
+        }
+      ],
+      "installationAppointment": {
+        "appointmentId": "APP3000002",
+        "date": "2023-04-06T10:00:00Z",
+        "technician": {
+          "technicianId": "TECH300",
+          "name": "Susan Clark"
+        },
+        "specialInstructions": "Business requires minimum downtime during installation."
+      },
+      "billing": {
+        "billingAccountId": "BILL3002",
+        "paymentMethod": "Bank Transfer",
+        "paymentStatus": "Paid"
+      },
+      "notes": "Ensure router compatibility."
+    },
+    {
+      "orderId": "ORD123456789",
+      "orderDate": "2024-04-01T09:00:00Z",
+      "customer": {
+        "customerId": "CUST987654321",
+        "name": "Jane Doe",
+        "address": {
+          "street": "1234 Main St",
+          "city": "Anytown",
+          "state": "Anystate",
+          "zipCode": "12345",
+          "country": "USA"
+        },
+        "contact": {
+          "phone": "555-1235678",
+          "email": "jane.doe@example.com"
+        }
+      },
+      "orderType": "New Installation",
+      "status": "Pending",
+      "servicePlan": {
+        "planId": "PLAN1001",
+        "planName": "Unlimited Data Plan",
+        "monthlyCost": 99.99,
+        "data": "Unlimited",
+        "minutes": "Unlimited",
+        "textMessages": "Unlimited"
+      },
+      "equipment": [
+        {
+          "equipmentId": "EQUIP001",
+          "type": "Modem",
+          "model": "Modem1234",
+          "serialNumber": "SN00123456789"
+        },
+        {
+          "equipmentId": "EQUIP002",
+          "type": "Router",
+          "model": "Router1234",
+          "serialNumber": "SN00987654321"
+        }
+      ],
+      "installationAppointment": {
+        "appointmentId": "APP1234567",
+        "date": "2023-04-05T13:00:00Z",
+        "technician": {
+          "technicianId": "TECH123",
+          "name": "John Smith"
+        },
+        "specialInstructions": "Customer requests installation in the home office."
+      },
+      "billing": {
+        "billingAccountId": "BILL12345",
+        "paymentMethod": "Credit Card",
+        "paymentStatus": "Unpaid"
+      },
+      "notes": "Customer is switching from a competitor's service."
+    }
+  ],
+  "targetUrl":"https://reqres.in/api/users"
+}

@@ -2,14 +2,10 @@ package org.example.camunda.process.solution.facade;
 
 import io.camunda.zeebe.client.ZeebeClient;
 import org.example.camunda.process.solution.ProcessConstants;
-import org.example.camunda.process.solution.ProcessVariables;
+import org.example.camunda.process.solution.dto.ProcessVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/process")
@@ -34,6 +30,14 @@ public class ProcessController {
         .latestVersion()
         .variables(variables)
         .send();
+  }
+
+  @PostMapping("/topo")
+  public void getTopology(@RequestBody ProcessVariables variables) {
+
+    LOG.info("Getting Topo");
+
+    LOG.info(zeebe.newTopologyRequest().send().join().toString());
   }
 
   @PostMapping("/message/{messageName}/{correlationKey}")

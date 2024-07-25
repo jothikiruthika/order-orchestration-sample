@@ -7,28 +7,10 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 @JsonInclude(Include.NON_NULL)
-public class ProcessVariables {
+public class OrderDetail {
 
-  private String businessKey;
-  private Boolean result;
-
-  public String getBusinessKey() {
-    return businessKey;
-  }
-
-  public ProcessVariables setBusinessKey(String businessKey) {
-    this.businessKey = businessKey;
-    return this;
-  }
-
-  public Boolean getResult() {
-    return result;
-  }
-
-  public ProcessVariables setResult(Boolean result) {
-    this.result = result;
-    return this;
-  }
+  private String orderId;
+  private String status;
 
   @Override
   public String toString() {
@@ -41,5 +23,21 @@ public class ProcessVariables {
             return this;
           }
         }.withShortPrefixes());
+  }
+
+  public String getOrderId() {
+    return orderId;
+  }
+
+  public void setOrderId(String orderId) {
+    this.orderId = orderId;
+  }
+
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
   }
 }

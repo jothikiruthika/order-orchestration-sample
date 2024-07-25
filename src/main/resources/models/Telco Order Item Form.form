@@ -1,0 +1,443 @@
+{
+  "executionPlatform": "Camunda Cloud",
+  "executionPlatformVersion": "8.5.0",
+  "exporter": {
+    "name": "Camunda Web Modeler",
+    "version": "8059276"
+  },
+  "schemaVersion": 16,
+  "id": "Form_0a9pa2y",
+  "components": [
+    {
+      "text": "### {{}} Order {{orderItem.orderId}}",
+      "type": "text",
+      "id": "Heading_0",
+      "layout": {
+        "row": "row_0",
+        "columns": null
+      }
+    },
+    {
+      "label": "Image view",
+      "type": "image",
+      "layout": {
+        "row": "row_0",
+        "columns": 2
+      },
+      "id": "Field_0w9ndlh",
+      "source": "https://cdn1.singteldigital.com/content/dam/singtel/online-draft/singtel_logo_coloured.png",
+      "alt": "Logo"
+    },
+    {
+      "text": "##### Order",
+      "type": "text",
+      "id": "Subheading_1",
+      "layout": {
+        "row": "row_1",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_2",
+      "label": "Order ID",
+      "validate": {
+        "minLength": 5,
+        "maxLength": 20,
+        "required": true
+      },
+      "key": "orderItem.orderId",
+      "description": "Enter the order ID",
+      "layout": {
+        "row": "row_2",
+        "columns": null
+      },
+      "readonly": true
+    },
+    {
+      "subtype": "datetime",
+      "dateLabel": "Order Date",
+      "type": "datetime",
+      "id": "Date_3",
+      "validate": {
+        "required": true
+      },
+      "key": "orderItem.orderDate",
+      "description": "Select the order date",
+      "layout": {
+        "row": "row_2",
+        "columns": null
+      },
+      "timeLabel": "Time",
+      "timeSerializingFormat": "utc_offset",
+      "timeInterval": 15
+    },
+    {
+      "values": [
+        {
+          "label": "New Installation",
+          "value": "New Installation"
+        },
+        {
+          "label": "Service Upgrade",
+          "value": "Service Upgrade"
+        }
+      ],
+      "type": "select",
+      "id": "Select_4",
+      "label": "Order Type",
+      "validate": {
+        "required": true
+      },
+      "key": "orderItem.orderType",
+      "description": "Select the order type",
+      "layout": {
+        "row": "row_2",
+        "columns": null
+      }
+    },
+    {
+      "text": "##### Customer",
+      "type": "text",
+      "id": "Subheading_5",
+      "layout": {
+        "row": "row_3",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_6",
+      "label": "Customer ID",
+      "validate": {
+        "minLength": 8,
+        "maxLength": 15,
+        "required": true
+      },
+      "key": "orderItem.customer.customerId",
+      "description": "Enter the customer ID",
+      "layout": {
+        "row": "row_4",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_7",
+      "label": "Customer Name",
+      "validate": {
+        "minLength": 2,
+        "maxLength": 50,
+        "required": true
+      },
+      "key": "orderItem.customer.name",
+      "description": "Enter the customer's name",
+      "layout": {
+        "row": "row_4",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_8",
+      "label": "Phone",
+      "validate": {
+        "minLength": 10,
+        "maxLength": 15,
+        "required": true
+      },
+      "key": "orderItem.customer.contact.phone",
+      "description": "Enter the phone number",
+      "layout": {
+        "row": "row_4",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_9",
+      "label": "Email",
+      "validate": {
+        "minLength": 5,
+        "maxLength": 50,
+        "required": true
+      },
+      "key": "orderItem.customer.contact.email",
+      "description": "Enter the email address",
+      "layout": {
+        "row": "row_5",
+        "columns": null
+      }
+    },
+    {
+      "text": "##### Service Plan",
+      "type": "text",
+      "id": "Subheading_10",
+      "layout": {
+        "row": "row_6",
+        "columns": null
+      }
+    },
+    {
+      "values": [
+        {
+          "value": "Basic",
+          "label": "Basic"
+        },
+        {
+          "value": "Standard",
+          "label": "Standard"
+        },
+        {
+          "value": "Premium",
+          "label": "Premium"
+        },
+        {
+          "label": "Family Data Plan",
+          "value": "Family Data Plan"
+        },
+        {
+          "label": "Business Data Plan",
+          "value": "Business Data Plan"
+        },
+        {
+          "label": "Unlimited Data Plan",
+          "value": "Unlimited Data Plan"
+        }
+      ],
+      "type": "select",
+      "id": "Select_11",
+      "label": "Plan Name",
+      "validate": {
+        "required": true
+      },
+      "key": "orderItem.servicePlan.planName",
+      "description": "Select the service plan",
+      "layout": {
+        "row": "row_7",
+        "columns": null
+      }
+    },
+    {
+      "type": "number",
+      "id": "Number_12",
+      "label": "Monthly Cost",
+      "decimalDigits": 2,
+      "defaultValue": 50,
+      "appearance": {
+        "prefixAdorner": "$"
+      },
+      "validate": {
+        "min": 10,
+        "max": 500,
+        "step": 0.5,
+        "required": true
+      },
+      "key": "orderItem.servicePlan.monthlyCost",
+      "description": "Enter the monthly cost",
+      "layout": {
+        "row": "row_7",
+        "columns": null
+      }
+    },
+    {
+      "text": "##### Equipment",
+      "type": "text",
+      "id": "Subheading_13",
+      "layout": {
+        "row": "row_8",
+        "columns": null
+      }
+    },
+    {
+      "components": [
+        {
+          "type": "textfield",
+          "id": "Textfield_14",
+          "label": "Equipment Type",
+          "validate": {
+            "minLength": 3,
+            "maxLength": 20,
+            "required": true
+          },
+          "key": "type",
+          "description": "Enter the equipment type",
+          "layout": {
+            "row": "Row_0yw6w2p",
+            "columns": null
+          }
+        },
+        {
+          "type": "textfield",
+          "id": "Textfield_15",
+          "label": "Equipment Model",
+          "validate": {
+            "minLength": 5,
+            "maxLength": 30,
+            "required": true
+          },
+          "key": "model",
+          "description": "Enter the equipment model",
+          "layout": {
+            "row": "Row_0yw6w2p",
+            "columns": null
+          }
+        },
+        {
+          "type": "textfield",
+          "id": "Textfield_16",
+          "label": "Serial Number",
+          "validate": {
+            "minLength": 8,
+            "maxLength": 20,
+            "required": true
+          },
+          "key": "serialNumber",
+          "description": "Enter the serial number",
+          "layout": {
+            "row": "Row_0yw6w2p",
+            "columns": null
+          }
+        }
+      ],
+      "showOutline": true,
+      "isRepeating": true,
+      "allowAddRemove": true,
+      "defaultRepetitions": 1,
+      "label": "Equipment",
+      "type": "dynamiclist",
+      "layout": {
+        "row": "Row_0q9avp0",
+        "columns": null
+      },
+      "id": "Field_11euown",
+      "path": "orderItem.equipment"
+    },
+    {
+      "text": "##### Installation Appointment",
+      "type": "text",
+      "id": "Subheading_17",
+      "layout": {
+        "row": "row_10",
+        "columns": null
+      }
+    },
+    {
+      "subtype": "datetime",
+      "dateLabel": "Appointment Date",
+      "type": "datetime",
+      "id": "Date_18",
+      "validate": {
+        "required": true
+      },
+      "key": "orderItem.installationAppointment.date",
+      "description": "Select the appointment date",
+      "layout": {
+        "row": "row_11",
+        "columns": null
+      },
+      "timeLabel": "Time",
+      "timeSerializingFormat": "utc_offset",
+      "timeInterval": 15
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_19",
+      "label": "Technician Name",
+      "validate": {
+        "minLength": 5,
+        "maxLength": 30,
+        "required": true
+      },
+      "key": "orderItem.installationAppointment.technician.name",
+      "description": "Enter the technician's name",
+      "layout": {
+        "row": "row_11",
+        "columns": null
+      }
+    },
+    {
+      "text": "##### Billing",
+      "type": "text",
+      "id": "Subheading_20",
+      "layout": {
+        "row": "row_12",
+        "columns": null
+      }
+    },
+    {
+      "type": "textfield",
+      "id": "Textfield_21",
+      "label": "Billing Account ID",
+      "validate": {
+        "minLength": 8,
+        "maxLength": 20,
+        "required": true
+      },
+      "key": "orderItem.billing.billingAccountId",
+      "description": "Enter the billing account ID",
+      "layout": {
+        "row": "row_13",
+        "columns": null
+      }
+    },
+    {
+      "values": [
+        {
+          "value": "Credit Card",
+          "label": "Credit Card"
+        },
+        {
+          "value": "Debit Card",
+          "label": "Debit Card"
+        },
+        {
+          "value": "PayPal",
+          "label": "PayPal"
+        },
+        {
+          "value": "Bank Transfer",
+          "label": "Bank Transfer"
+        },
+        {
+          "label": "Value 5",
+          "value": "value5"
+        }
+      ],
+      "type": "select",
+      "id": "Select_22",
+      "label": "Payment Method",
+      "validate": {
+        "required": true
+      },
+      "key": "orderItem.billing.paymentMethod",
+      "description": "Select the payment method",
+      "layout": {
+        "row": "row_13",
+        "columns": null
+      }
+    },
+    {
+      "text": "##### Additional Notes",
+      "type": "text",
+      "id": "Subheading_23",
+      "layout": {
+        "row": "row_14",
+        "columns": null
+      }
+    },
+    {
+      "label": "Note",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_12mkx5t",
+        "columns": null
+      },
+      "id": "Field_03uqg2x",
+      "key": "orderItem.notes",
+      "description": "Additonal notes"
+    }
+  ],
+  "generated": true,
+  "type": "default"
+}
